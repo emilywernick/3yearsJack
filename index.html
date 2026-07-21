@@ -10,7 +10,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --purple: #D8C4E8;
+      --purple: #cfb6dd;
       --blue:   #7BA7C2;
       --green:  #7BAF8C;
       --dark-purple: #9B7BBF;
@@ -40,7 +40,11 @@
     #password-screen {
       position: fixed;
       inset: 0;
-      background: linear-gradient(160deg, var(--purple) 0%, #e8d8f5 40%, var(--blue) 80%, #a8c8e0 100%);
+      background-color: #cfb6dd;
+      background-image: url(IMG_0817.JPG);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -49,6 +53,20 @@
       overflow: hidden;
       gap: 0;
     }
+
+/* soft overlay so form stays readable over the heart photo */
+#password-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(207, 182, 221, 0.25);
+  z-index: 0;
+}
+
+#password-screen > * {
+  position: relative;
+  z-index: 1;
+}
 
     /* ── POLAROID STRIP ── */
     .polaroid-strip {
@@ -224,7 +242,7 @@
     /* ── HEADER BANNER ── */
     .banner {
       width: 100%;
-      background: linear-gradient(135deg, var(--purple) 0%, #c8d8f0 50%, var(--blue) 100%);
+      background: linear-gradient(135deg, #cfb6dd 0%, #c8d8f0 50%, var(--blue) 100%);
       border-bottom: 2px solid var(--black);
       padding: 64px 20px 52px;
       text-align: center;
@@ -318,7 +336,7 @@
 
     /* ── PHOTO GALLERY ── */
     .gallery-section {
-      background: linear-gradient(180deg, var(--cream) 0%, #ede8f5 100%);
+      background: linear-gradient(180deg, var(--cream) 0%, #e8d6f0 100%);
       border-top: 2px solid var(--black);
       padding: 56px 20px 72px;
       display: flex;
@@ -508,10 +526,7 @@
     <div class="gallery-section">
       <p class="gallery-title">sketches</p>
       <div class="two-photo-row">
-        <!--
-          PHOTO 1 & 2: add style="background-image: url(yourphoto.jpg)" to each div
-          e.g. <div class="big-photo" style="background-image: url(beach.jpg)">
-        -->
+        
         <div class="big-photo" style="background-image: url(IMG_0817.JPG)"></div>
         <div class="big-photo" style="background-image: url(IMG_0818.JPG)"></div>
       </div>
