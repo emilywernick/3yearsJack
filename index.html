@@ -69,15 +69,17 @@
 }
 
     /* ── POLAROID STRIP ── */
-    .polaroid-strip {
+   .polaroid-strip {
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      gap: 16px;
-      margin-bottom: 36px;
+      gap: 12px;
+      margin-bottom: 28px;
       padding: 0 12px;
-      flex-wrap: nowrap;
-    }
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+}
 
     /*
       
@@ -116,31 +118,31 @@
     /* Individual polaroid sizes and rotations */
     .polaroid-1 {
       width: 110px; height: 155px;
-      transform: rotate(-8deg) translateY(10px);
+      transform: rotate(-35deg) translateY(60px);
     }
     .polaroid-1 .polaroid-img {
       background-image: url(IMG_2124.JPG);
     }
 
     .polaroid-2 {
-      width: 120px; height: 165px;
-      transform: rotate(-3deg) translateY(4px);
+      width: 118px; height: 163px;
+      transform: rotate(-16deg) translateY(20px);
     }
     .polaroid-2 .polaroid-img {
       background-image: url(IMG_4634.JPG);
     }
 
     .polaroid-3 {
-      width: 125px; height: 170px;
-      transform: rotate(1deg);
+      width: 122px; height: 168px;
+      transform: rotate(0deg) translateY(0px);
     }
     .polaroid-3 .polaroid-img {
       background-image: url(IMG_5067.JPG);
     }
 
     .polaroid-4 {
-      width: 120px; height: 165px;
-      transform: rotate(4deg) translateY(4px);
+      width: 118px; height: 163px;
+      transform: rotate(16deg) translateY(20px);
     }
     .polaroid-4 .polaroid-img {
       background-image: url(IMG_2132.JPG);
@@ -148,7 +150,7 @@
 
     .polaroid-5 {
       width: 110px; height: 155px;
-      transform: rotate(9deg) translateY(10px);
+      transform: rotate(35deg) translateY(60px);
     }
     .polaroid-5 .polaroid-img {
       background-image: url(IMG_5405.JPG);
@@ -158,7 +160,7 @@
     #password-screen h2 {
       font-family: 'Great Vibes', cursive;
       font-size: 52px;
-      color: var(--black);
+      color: var(color: #ffffff;);
       text-align: center;
       margin-bottom: 6px;
       text-shadow: 0 2px 12px rgba(255,255,255,0.7);
@@ -169,7 +171,7 @@
     #password-screen p.pw-sub {
       font-family: 'Lato', sans-serif;
       font-size: 13px;
-      color: #555;
+      color: #ffffff;
       margin-bottom: 22px;
       letter-spacing: 0.05em;
     }
